@@ -29,12 +29,14 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.0.1",
+    "bleno": "npm:@abandonware/bleno@^0.5.1-4",
     "bluetooth-hci-socket": "npm:@abandonware/bluetooth-hci-socket@^0.5.3-8",
     "bplist-parser": "^0.0.6",
     "colors": "^1.1.2",
     "debug": "^2.6.9",
     "env2": "^2.1.0",
     "glob": "^7.0.5",
+    "noble": "npm:@abandonware/noble@^1.9.2-19",
     "node-getopt": "^0.2.3",
     "ws": "^1.1.1"
   }
