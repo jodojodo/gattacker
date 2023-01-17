@@ -430,6 +430,7 @@ int main(int argc, char *argv[])
 	}
 
 	for (i = 0; vendor[i].compid != 65535; i++)
+    {
 		if (ver.manufacturer == vendor[i].compid) {
 			comp = batocomp(&bdaddr);
 
@@ -469,6 +470,7 @@ int main(int argc, char *argv[])
 			hci_close_dev(dd);
 			exit(0);
 		}
+    }
 
 	hci_close_dev(dd);
 
