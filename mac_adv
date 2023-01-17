@@ -25,8 +25,11 @@ HCIMAC=`hciconfig $HCIDEV |grep "Address" | cut -d" " -f 3`
 while [ "${HCIMAC,,}" != "${TARGETMAC,,}" ]; do
 	hciconfig $HCIDEV up
 	$BDADDR -i $HCIDEV $TARGETMAC;
-	echo "Re-plug the interface and hit enter";
-	read 
+    echo "Hit Enter to restart the deivce and bluetooth service." 
+    read
+	hciconfig $HCIDEV up
+    systemctl restart bluetooth.service
+	echo "Restart done.";
 	hciconfig $HCIDEV up
 	HCIMAC=`hciconfig $HCIDEV |grep "Address" | cut -d" " -f 3`
 	echo "Current MAC: $HCIMAC"
