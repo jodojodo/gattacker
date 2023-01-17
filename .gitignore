@@ -1,1 +1,6 @@
 node_modules
+devices
+helpers/bdaddr/bdaddr
+helpers/bdaddr/bdaddr.o
+helpers/bdaddr/oui.o
+
